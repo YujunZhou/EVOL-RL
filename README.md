@@ -1,6 +1,39 @@
 # 🧬 EVOL-RL: Evolutionary Reinforcement Learning
 
-Code for "Evolving Language Models without Labels: Majority Drives Selection, Novelty Promotes Variation (EVOL-RL)".
+Code for "Evolving Language Models without Labels: Majority Drives Selection, Novelty Promotes 
+Variation (EVOL-RL)".
+
+![Illustration of entropy collapse in TTRL and EVOL-RL jumping out of the collapse](assets/Figure1.png)
+
+## 🧭 Overview
+
+This repository contains the official implementation for EVOL-RL, a new framework for enabling Large Language Models (LLMs) to continuously self-improve on unlabeled data without suffering from catastrophic performance degradation.
+
+### 🧠 The Problem: Cognitive Collapse in Label-Free Learning
+
+Current label-free reinforcement learning methods, such as Test-Time Reinforcement Learning (TTRL), show promise but suffer from a critical failure mode we identify as "Cognitive Collapse." By optimizing solely for self-generated signals like majority consensus, these methods trap the model in a degenerative feedback loop. The model's capacity for exploration rapidly diminishes, leading to a decline in solution diversity (pass@n), reasoning complexity, and out-of-domain generalization, even as single-answer accuracy (pass@1) might deceptively rise.
+
+### 🧬 Our Solution: Balancing Selection and Variation
+
+Inspired by the principles of biological evolution, EVOL-RL redesigns the learning objective to explicitly balance two fundamental forces:
+
+- Selection (Stability): We retain the majority-voted answer as a stabilizing signal to ensure the model remains anchored to a high-probability correct solution.
+- Variation (Exploration): We introduce a crucial novelty-aware reward that incentivizes the model to explore by rewarding reasoning paths that are semantically different from their peers.
+
+This "majority-for-stability, novelty-for-exploration" design successfully averts cognitive collapse, fostering a healthy equilibrium that allows the model to both refine known solutions and discover new ones.
+
+### 📈 Key Results
+
+Our experiments on Qwen3-4B-Base and Qwen3-8B-Base models show that EVOL-RL consistently and substantially outperforms consensus-only baselines.
+
+- Prevents Collapse: EVOL-RL successfully reverses the decline in solution diversity, reasoning complexity, and policy entropy observed in TTRL.
+- Boosts Generalization: EVOL-RL achieves significant performance gains, especially on out-of-domain benchmarks. For instance, after training on AIME24, EVOL-RL boosts the Qwen3-4B model's pass@1 accuracy on the unseen AIME25 benchmark from 4.6% (TTRL) to 16.4% and more than doubles its pass@16 accuracy from 18.5% to 37.9%.
+
+This repository provides the necessary code to replicate our findings and apply the EVOL-RL framework to your own models.
+
+More results can be found in the following figure and table:
+
+![Results](assets/Figure2.jpg)
 
 ## 📁 Project Structure
 
