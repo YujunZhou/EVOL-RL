@@ -146,21 +146,21 @@ sh test_three_datasets.sh --batch_mode --set 1
 sh test_three_datasets.sh --model_path /path/to/model --datasets AIME-TTT
 ```
 
-## 📊 Available Datasets
+## 📊 Available Benchmark Datasets
 
 - **AIME-TTT**: AIME 2024 problems
-- **MATH-TTT**: MATH500 problems  
+- **MATH-TTT**: MATH-500 problems  
 - **AIME25**: AIME 2025 problems
 - **AMC-TTT**: AMC competition problems
 - **GPQA-TTT**: GPQA-Diamond problems
 
 ## 🎯 Available Training Tasks
 
-- **AIME-TTT**: AIME24 competition problems training
-- **MATH-TTT**: MATH dataset problems training
+- **AIME-TTT**: AIME 2024 competition problems 
+- **MATH-TTT**: MATH-500 dataset
 - **math_train**: MATH training set 
 
 ## 🤖 Model Support
 
-- **Qwen3-4B-Base**: 4B parameter model
-- **Qwen3-8B-Base**: 8B parameter model
+- **Qwen3-4B-Base**
+- **Qwen3-8B-Base**
