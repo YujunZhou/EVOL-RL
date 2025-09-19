@@ -1,4 +1,4 @@
-# 🧬 EVOL-RL: Evolutionary Reinforcement Learning
+# 🧬 EVOL-RL: Evolving Language Models without Labels: Majority Drives Selection, Novelty Promotes Variation
 
 ## 🧭 Overview
 
