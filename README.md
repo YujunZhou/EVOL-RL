@@ -53,6 +53,12 @@ pip install antlr4-python3-runtime==4.9.3
 pip install numpy==1.26.4
 ```
 
+To prepare the dataset, run:  
+```bash 
+cd data  
+python preprocess_simplerl.py  
+```
+
 ### 2. 🎯 TTRL Baseline Training and Testing
 
 For TTRL baseline, you can directly run training and testing on the MATH Training Set:
