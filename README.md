@@ -6,6 +6,12 @@ This repository contains the official implementation for EVOL-RL, a new framewor
 
 ![Illustration of entropy collapse in TTRL and EVOL-RL jumping out of the collapse](assets/Figure1.png)
 
+## 📚 Resources
+
+- 📄 Paper: [arXiv 2509.15194](https://arxiv.org/abs/2509.15194)  
+- 🤗 Models Collection: [EVOL-RL on Hugging Face](https://huggingface.co/collections/yujunzhou/evol-rl-68d8f3f7e2fadab49d6c3b9b)
+
+
 ### 🧠 The Problem & Our Solution
 
 Current label-free methods like Test-Time Reinforcement Learning (TTRL) suffer from a critical failure mode we identify as "Cognitive Collapse." Optimizing solely for self-consensus traps the model in a degenerative loop, causing a decline in solution diversity (pass@n), reasoning complexity, and out-of-domain generalization.
@@ -170,3 +176,13 @@ sh test_three_datasets.sh --model_path /path/to/model --datasets AIME-TTT
 
 - **Qwen3-4B-Base**
 - **Qwen3-8B-Base**
+
+## ✨ Citation
+
+```bibtex
+@article{zhou2025evolving,
+  title={Evolving Language Models without Labels: Majority Drives Selection, Novelty Promotes Variation},
+  author={Zhou, Yujun and Liang, Zhenwen and Liu, Haolin and Yu, Wenhao and Panaganti, Kishan and Song, Linfeng and Yu, Dian and Zhang, Xiangliang and Mi, Haitao and Yu, Dong},
+  journal={arXiv preprint arXiv:2509.15194},
+  year={2025}
+}
