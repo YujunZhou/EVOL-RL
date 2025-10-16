@@ -545,6 +545,19 @@ class SemanticTTRLRewardManager:
         
         print(f"Logged novelty statistics to wandb: {len(log_data)} metrics")
 
+    def _extract_after_think(self, text: str) -> str:
+        """
+        Extract content after </think> tag for semantic similarity calculation
+        """
+        think_end_tag = "</think>"
+        think_end = text.find(think_end_tag)
+        
+        if think_end != -1:
+            after_think = text[think_end + len(think_end_tag):].strip()
+            return after_think
+        else:
+            return text
+
 
     def _check_boxed_content_has_numbers(self, text: str) -> bool:
         """
