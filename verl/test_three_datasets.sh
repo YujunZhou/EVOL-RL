@@ -310,7 +310,7 @@ evaluate_single_model() {
     echo "Running fast evaluation..."
 
     # Use existing training data file
-    local TRAIN_FILE="$DATA_LOCAL_DIR/AIME-TTT/train-simplerl.parquet"
+    local TRAIN_FILE="$DATA_LOCAL_DIR/AIME-TTT/train-simplerl-16.parquet"
 
     # Check if training file exists
     if [ ! -f "$TRAIN_FILE" ]; then
